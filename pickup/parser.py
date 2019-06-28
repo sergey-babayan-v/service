@@ -22,7 +22,7 @@ class Parser:
         for regexpr in self.get_regexprs():
             groups = regexpr.findall(normalized)
             for group in groups:
-                code = group[0] if group[0][0] != '+' else str(int(group[0])+1)
+                code = "8"
                 body = group[1].replace(" ", "").replace("\t", "")
                 phones.append(code+body)
         return set(phones)
